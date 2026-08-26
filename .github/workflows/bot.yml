@@ -1,4 +1,4 @@
-name: Run Telegram Bot
+ name: Run Telegram Bot
 
 on:
   push:
@@ -13,9 +13,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-
-
-      
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -27,6 +24,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Bot
+- name: Run Bot
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
